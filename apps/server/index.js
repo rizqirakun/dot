@@ -25,7 +25,7 @@ app.listen(PORT, () => {
 
 app.use(
     cors({
-        origin: [BASE_URL, 'http://localhost:3001', 'rizqirakun.com', '*.rizqirakun.com'],
+        origin: [BASE_URL, 'http://localhost:3001', 'rizqirakun.com', '*.rizqirakun.com', '*.vercel.app'],
         methods: ["GET", "POST", "PUT", "DELETE"],
         credentials: true,
     })
