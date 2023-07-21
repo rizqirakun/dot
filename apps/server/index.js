@@ -40,3 +40,6 @@ app.use(cookieParser());
 app.use(express.json());
 
 app.use("/", authRoute);
+
+// Export the Express API
+module.exports = app;
