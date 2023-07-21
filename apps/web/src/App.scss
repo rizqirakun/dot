@@ -1,0 +1,110 @@
+@import 'styles/_reset.scss';
+@import 'styles/_colors.scss'; // assuming a styles directory under src/
+@import '~react-toastify/dist/ReactToastify.css'; // loading a css file from the nprogress node module
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $background-color;
+}
+
+.form-container {
+    background-color: white;
+    padding: 2rem 3rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+
+    >h2 {
+        margin-block: 1rem;
+        padding-block: 0.6rem;
+        color: $primary-color;
+    }
+
+    >form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.4rem;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+
+    input {
+        border: 1px solid #ddd;
+        padding: .5rem;
+        border-radius: .3rem;
+        font-size: 1.1rem;
+        outline: none;
+
+        &::placeholder {
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+    }
+
+    button {
+        background-color: $primary-color;
+        color: white;
+        border: none;
+        padding: 0.6rem;
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 0.3rem;
+    }
+}
+
+span a {
+    text-decoration: none;
+    color: $primary-color;
+}
+
+.homepage {
+    height: 100vh;
+    width: 100vw;
+    background: $background-color;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 3rem;
+    flex-direction: column;
+    gap: 1rem;
+
+    span {
+        color: $primary-color;
+    }
+
+    button {
+        background-color: $accent-color;
+        color: #fff;
+        cursor: pointer;
+        padding: 1rem 3rem;
+        font-size: 2rem;
+        border-radius: 2rem;
+        transition: ease-in 0.3s;
+        border: none;
+
+        &:hover {
+            background-color: $primary-color;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .homepage {
+        font-size: 1.5rem;
+
+        button {
+            padding: 0.6rem 1rem;
+            font-size: 1.5rem;
+        }
+    }
+}

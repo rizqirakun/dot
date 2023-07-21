@@ -3,7 +3,7 @@ const { createSecretToken } = require("../utils/secretToken");
 const bcrypt = require("bcryptjs");
 
 module.exports.Register = async (req, res, next) => {
-    const { email, password, username, createdAt } = req.body;
+    const { email, password, name, createdAt } = req.body;
 
 
     try {
@@ -12,7 +12,7 @@ module.exports.Register = async (req, res, next) => {
             throw { status: 403, message: 'User already exist' };
         }
 
-        const user = await User.create({ email, password, username, createdAt });
+        const user = await User.create({ email, password, name, createdAt });
 
         const token = createSecretToken(user._id);
         res.cookie("token", token, {
@@ -26,7 +26,7 @@ module.exports.Register = async (req, res, next) => {
     } catch (err) {
         console.error(err);
         let status = 500;
-        if (!email | !password | !username) {
+        if (!email | !password | !name) {
             status = 400;
         } else if (err.status) {
             status = err.status;

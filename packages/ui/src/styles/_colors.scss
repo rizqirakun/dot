@@ -1,0 +1,9 @@
+$primary-color: #2D4356;
+$accent-color: #435B66;
+$background-color: #EAB2A0;
+
+:root {
+    --primary-color-right: #{$primary-color};
+    --accent-color-right: #{$accent-color};
+    --background-color-right: #{$background-color};
+}

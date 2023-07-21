@@ -1,0 +1,88 @@
+@import "./colors";
+
+.btn {
+    font-size: 14px;
+    padding: 6px 12px;
+    margin-bottom: 0;
+
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+
+    &:focus,
+    &:active:focus {
+        outline: thin dotted;
+        outline: 5px auto -webkit-focus-ring-color;
+        outline-offset: -2px;
+    }
+
+    &:hover,
+    &:focus {
+        color: #333;
+        text-decoration: none;
+    }
+
+    &:active {
+        background-image: none;
+        outline: 0;
+        -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+        box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+    }
+
+    /* default
+---------------------------- */
+    .btn-default {
+        color: #333;
+        background-color: #fff;
+        border-color: #ccc;
+
+        &:focus {
+            color: #333;
+            background-color: #e6e6e6;
+            border-color: #8c8c8c;
+        }
+
+        &:hover {
+            color: #333;
+            background-color: #e6e6e6;
+            border-color: #adadad;
+        }
+
+        &:active {
+            color: #333;
+            background-color: #e6e6e6;
+            border-color: #adadad;
+        }
+    }
+
+    /* default
+---------------------------- */
+    .btn-primary {
+        color: white;
+        background-color: $primary-color;
+        border-color: $primary-color;
+
+        &:focus {
+            color: white;
+            background-color: lighten($primary-color, 40%);
+        }
+
+        &:hover {
+            color: white;
+            background-color: lighten($primary-color, 20%);
+        }
+
+        &:active {
+            color: white;
+            background-color: darken($primary-color, 20%);
+        }
+    }
+
+}
